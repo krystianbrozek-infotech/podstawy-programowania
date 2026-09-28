@@ -6,6 +6,7 @@ opcja = ""
 while opcja != "0":
     print("1. Pokaż bohatera")
     print("2. Wyrusz na wyprawę")
+    print("3. Tawerna")
     print("0. Koniec")
 
     opcja = input("Wybierz opcję: ")
