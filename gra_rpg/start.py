@@ -1,21 +1,15 @@
 import random
+import funkcje
 
 def przedstawSie(imie, zdrowie, maxZdrowie):
     print(f"Twój bohater nazywa się: {imie}   HP: {zdrowie}/{maxZdrowie}")
 
 def wyprawa(zdrowie):
     print("Wyruszasz na wyprawę...")
-    print("Na Twojej drodze staje", losujPrzeciwnika())
+    przeciwnik, zdrowiePrzeciwnika, silaPrzeciwnika = funkcje.losujPrzeciwnika()
+    print(f"Na Twojej drodze staje {przeciwnik} o sile {silaPrzeciwnika} i zdrowiu {zdrowiePrzeciwnika}")
     return zdrowie - random.randint(0, 2)
 
-def losujPrzeciwnika():
-    przeciwnik = random.randint(1, 3)
-    if przeciwnik == 1:
-        return "Straszliwy Pikaczu Zagłady"
-    if przeciwnik == 2:
-        return "Zły Czarodziej"
-    if przeciwnik == 3:
-        return "Wielki Smok"
 
 imie = input("Jak się nazywasz bohaterze? ")
 zdrowie = 15
@@ -32,5 +26,4 @@ while opcja != "0":
     if opcja == "1":
         przedstawSie(imie, zdrowie, maxZdrowie)
     elif opcja == "2":
-        zdrowie = wyprawa(zdrowie)
-        
+        zdrowie = wyprawa(zdrowie)   
