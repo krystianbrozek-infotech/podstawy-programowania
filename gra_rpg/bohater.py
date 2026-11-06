@@ -7,6 +7,7 @@ class Bohater:
         self.doswiadczenie = 0
         self.poziom = 1
         self.plecak = []
+        self.noszonaBron = None
 
     def przedstawSie(self):
         print(f"{self.imie}   HP: {self.zdrowie}/{self.maxZdrowie}   Kasa: {self.kasa}   Doświadczenie: {self.doswiadczenie}/50   Poziom: {self.poziom}")

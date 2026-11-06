@@ -23,6 +23,8 @@ while opcja != "0":
     opcja = input("Wybierz opcję: ")
     if opcja == "1":
         postac.przedstawSie()
+        if postac.noszonaBron != None:
+            print(postac.noszonaBron.przedstawSie())
     elif opcja == "2":
         przeciwnik = Przeciwnik()
         przeciwnik.przedstawSie()
@@ -33,3 +35,5 @@ while opcja != "0":
         for bron in postac.plecak:
             print(f"{nr}. {bron.przedstawSie()}")
             nr += 1
+        zaloz = int(input("Którą broń chcesz założyć? ")) #1
+        postac.noszonaBron = postac.plecak[zaloz-1]
